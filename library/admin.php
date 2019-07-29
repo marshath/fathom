@@ -34,27 +34,36 @@ function remove_dashboard_meta() {
 
 	/************* REMOVE ADMIN SIDEBAR MENU ITEMS *************/
 	// remove_menu_page('index.php'); 			// dashboard
-	// remove_menu_page('edit.php'); 			// posts
-	// remove_menu_page('edit-comments.php'); 	// comments
+	remove_menu_page('edit.php'); 			// posts
+	remove_menu_page('edit-comments.php'); 	// comments
 	// remove_menu_page('themes.php'); 			// appearance
-	// remove_menu_page('plugins.php'); 		// plugins
+	remove_menu_page('plugins.php'); 		// plugins
 	// remove_menu_page('users.php'); 			// users
-	// remove_menu_page('tools.php'); 			// tools
+	remove_menu_page('tools.php'); 			// tools
 	// remove_menu_page('options-general.php'); // settings
 	// remove_menu_page('wpseo_dashboard'); 	// Yoast SEO
 } 
+
+// REMOVE Advance Custom Fields ACF
+add_filter('acf/settings/show_admin', '__return_false');
 
 // REMOVE APPEARANCE SUBMENU ITEMS
 add_action('admin_init', 'remove_theme_submenus');
 function remove_theme_submenus() {
 	global $submenu; 
-	// unset($submenu['themes.php'][5]); 	// appearance > themes
+	// unset($submenu['themes.php'][5]); 		// appearance > themes
 	unset($submenu['themes.php'][6]); 		// appearance > customize
-	// unset($submenu['themes.php'][7]); 	// appearance > widgets
+	// unset($submenu['themes.php'][7]); 		// appearance > widgets
 	// unset($submenu['themes.php'][10]); 	// appearance > menus
 	unset($submenu['themes.php'][11]); 		// appearance > editor
 	unset($submenu['themes.php'][20]); 		// appearance > background
 }
+
+// REMOVE Appearance > Theme Editor
+function remove_editor_menu() {
+  remove_action('admin_menu', '_add_themes_utility_last', 101);
+}
+add_action('_admin_menu', 'remove_editor_menu', 1);
 
 // REMOVE ADMIN BAR MENU ITEMS
 add_action('wp_before_admin_bar_render', 'my_remove_admin_bar_links');

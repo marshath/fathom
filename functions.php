@@ -8,8 +8,8 @@ such as thumbnail sizes, header image, sidebars, comments, ect.
 */
 
 // CHANGE THE WORDPRESS URL
-// update_option('siteurl','http://localhost:8888/_templates/degrees-wp');
-// update_option('home','http://localhost:8888/_templates/degrees-wp');
+// update_option('siteurl','http://localhost:8888/fathom-insight.com/anacortes2');
+// update_option('home','http://localhost:8888/fathom-insight.com/anacortes2');
 
 
 // LOAD BONES CORE (if you remove this, the theme will break)
@@ -158,29 +158,10 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
-	register_sidebar(array(
-		'id' => 'sidebar-blog',
-		'name' => __( 'Sidebar —Blog', 'bonestheme' ),
-		'description' => __( 'The blog sidebar.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-	
-	register_sidebar(array(
-		'id' => 'sidebar-contact',
-		'name' => __( 'Sidebar —Contact', 'bonestheme' ),
-		'description' => __( 'The Contact page sidebar.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
 	
 	register_sidebar(array(
 		'id' => 'footer1',
-		'name' => __( 'Footer —Company', 'bonestheme' ),
+		'name' => __( 'Footer', 'bonestheme' ),
 		'description' => __( 'The company information in the footer.', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
