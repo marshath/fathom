@@ -9,6 +9,10 @@
 CONTACT INFORMATION 
 *******************************/
 .footer-wrap {
+	padding-top: baseline(0.5);
+	h4 {
+		margin-bottom: 0;
+	}
 	.widget {
 		display:block;
 		width:100%;

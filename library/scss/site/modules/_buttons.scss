@@ -22,7 +22,7 @@ GLOBAL BUTTONS
 
 // STANDARD BUTTON
 .btn { 
-	background: site-color-alpha('secondary','dark');
+	background: blue;
 	&:hover {
 		background: site-color-lighten('secondary',2);
 	}
@@ -44,5 +44,12 @@ GLOBAL BUTTONS
 	background: site-color('foreground');
 	&:hover {
 		background-color: site-color-lighten('foreground',1);
+	}
+}
+
+.wp-block-button {
+	border: 1px solid red;
+	&__link {
+		border: 1px solid blue;
 	}
 }

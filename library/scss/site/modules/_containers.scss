@@ -7,6 +7,7 @@
 
 body {
 	width: 100%; // sets width for grid columns
+	background: site-color('foreground');
 	@include clearfix; // fixes height with grid columns
 }
 
@@ -33,7 +34,6 @@ BACKGROUND WRAPS
 
 .inner-wrap,
 .sidebar {
-	@include column(12);
 }
 
 
@@ -41,8 +41,11 @@ BACKGROUND WRAPS
 HEADER
 *******************************/
 .header-wrap {
-	background-color: site-color('foreground');
-	margin-bottom: baseline(0.5);
+	background-color: rgba(0,0,0,0.25);
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 
@@ -50,7 +53,7 @@ HEADER
 MAIN 
 *******************************/
 .main-wrap, sidebar {
-	margin-bottom: baseline(1);
+	//margin-bottom: baseline(1);
 }
 
 
@@ -58,7 +61,6 @@ MAIN
 SIDEBAR 
 *******************************/
 .sidebar {
-	margin-bottom: baseline(1);
 }
 
 
@@ -67,6 +69,6 @@ FOOTER
 *******************************/
 .footer-wrap {
 	background-color: site-color('foreground');
-	padding-top: baseline(2);
+	background-image: linear-gradient(to bottom, #444 0%, site-color('foreground') 7%);
 }
 

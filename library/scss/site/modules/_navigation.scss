@@ -29,12 +29,14 @@ HEADER & FOOTER NAVIGATION
 		flex-grow: 1;
 	}
 	a {
-		color: site_color('secondary');
+		color: rgba(255,255,255,0.7);
 		text-decoration: none;
+		text-shadow: 0 1px 2px black;
 		padding: baseline(1) 0;
 		display:block;
 		&:hover, &:focus {
-			background: rgba(255,255,255,0.6);
+			color: rgba(255,255,255,1);
+			background: site-color-alpha('primary', 'dark');
 		}
 	}
 }
@@ -53,7 +55,7 @@ HEADER & FOOTER NAVIGATION
 	.active ul {
 		display: flex; // shows the navigation, when the 'menu-toggle' is clicked
 	}
-	@include bp('tablet-v') {
+	@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
 		ul {
 			display: flex; // shows the navigation
 			flex-flow: row wrap; // format as a row
@@ -71,7 +73,7 @@ HEADER & FOOTER NAVIGATION
 	}
 	a {
 	}
-	@include bp('tablet-v') {
+	@include bp('tablet-v') {	// ***** Tablet Vertical ***** //
 		ul {
 			flex-flow: row wrap; // format as a row
 		}

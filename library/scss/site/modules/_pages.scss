@@ -6,6 +6,85 @@
 
 
 /*******************************
+HOME
+*******************************/
+.splash-hero {
+	background-size: cover;
+	background-position: center center;
+	padding: 16em 1em 4em 1em;		// spacing for nav on top
+	min-height: 50vh;			// half page height
+	@include bp('tablet-v') {
+		padding-top: 18em;
+	}
+}
+.splash-title {
+	color: white;
+	text-align: center;
+}
+.splash-text {
+	max-width: 800px;
+	margin: auto;
+	color: white;
+	h2 {
+		text-align: center;
+		@include font-size(30);
+		text-shadow: 1px 2px 3px black;
+	}
+	p {
+		@include font-size(18);
+		background: rgba( 0,0,0,0.5);
+		padding: 1em 2em 2em 2em;
+		border-bottom: 2px solid site-color('accent');
+	}
+}
+
+.cta-block {
+	text-align: center;
+	margin: -4em auto 0 auto;
+	.btn {
+		background: site-color('secondary');
+		background-image: linear-gradient(to bottom, site-color('secondary') 0%, site-color('background') 100%);
+		box-shadow: 0 0.25em 1em rgba(0,0,0,1), inset 0 0.1em 0.25em rgba(0,0,0,0.75);
+		border: 2px solid site-color('secondary');
+		text-shadow: 0 2px 3px black;
+		font-weight: bold;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			background: site-color('primary');
+			background-image: linear-gradient(to bottom, site-color('primary') 0%, site-color('secondary') 100%);
+			border: 2px solid site-color-lighten('secondary', 1);
+		}
+	}
+}
+
+/**** Callouts ****/
+.feature-callouts {
+	display: flex;
+	flex-flow: column nowrap;			// vertical orientation
+	border-top: 6px solid site-color('primary');		// blue line above
+	border-bottom: 7px solid site-color('primary');		// blue line below
+	&-item {
+		background: linear-gradient(45deg, #fff 0%, #eee 100%);
+		padding: 1em 1.5em;
+	}
+	@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
+		flex-flow: row nowrap;			// horizontal orientation
+	}
+}
+.cta {
+	&-icon {
+		max-width: 50px;
+		margin: auto;
+	}
+	&-title {
+		text-align: center;
+	}
+	&-text {
+		
+	}
+}
+
+/*******************************
 BLOG
 *******************************/
 // BLOG ARCHIVE LIST
