@@ -37,7 +37,7 @@
 		<div id="container" class="page-wrap">
 
 			<header class="header-wrap" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-				<div id="inner-header" class="inner-wrap">
+				<div id="inner-header" class="inner-wrap-header">
 
 					<?php // Compnay logo or text ?>
 					<div id="logo" class="header-logo" itemscope itemtype="http://schema.org/Organization">

@@ -27,13 +27,18 @@ HEADER & FOOTER NAVIGATION
 	li {
 		width:100%;
 		flex-grow: 1;
+		&:last-child a {
+			background-image: linear-gradient(to bottom, site-color('secondary') 0%, site-color('primary') 100%);
+		}
 	}
 	a {
-		color: rgba(255,255,255,0.7);
+		color: rgba(255,255,255,0.85);
 		text-decoration: none;
-		text-shadow: 0 1px 2px black;
+		text-shadow: 0 2px 2px black;
 		padding: baseline(1) 0;
 		display:block;
+		border-radius: 0.15em;
+		//background: site-color-alpha('primary', 'dark');
 		&:hover, &:focus {
 			color: rgba(255,255,255,1);
 			background: site-color-alpha('primary', 'dark');
@@ -42,13 +47,30 @@ HEADER & FOOTER NAVIGATION
 }
 
 .nav-header {
+	width: 80%;						// reduce menu mobile
+	max-width: 40em;
 	h3 { // is the 'menu-toggle'
 		text-align: center;
+		position: relative;			// parent positioning for hamberger menu
+		&::before {
+			content: 'E';
+			float: left;
+			color: white;
+			font-family: arial, sans-serif;
+			position: absolute;
+			top: baseline(1);
+			left: 35%;
+		}
 	}
 	ul {
 		display: none; // hides the navigation, until the 'menu-toggle' is clicked
+		border-radius: 0.25em;
+		overflow: hidden;
+		border: 2px solid site-color('secondary');
+		box-shadow: 0 0.25em 1em rgba(0,0,0,0.7);
 	}
 	li {
+		background: rgba(22,41,80,0.7);
 	}
 	a {
 	}
@@ -56,12 +78,18 @@ HEADER & FOOTER NAVIGATION
 		display: flex; // shows the navigation, when the 'menu-toggle' is clicked
 	}
 	@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
+		width: 80%;				// collapse menu width
 		ul {
 			display: flex; // shows the navigation
 			flex-flow: row wrap; // format as a row
+			margin-right: 2em;
+			border: none;
+			box-shadow: none;
 		}
 		li {
+			background: none;
 			width: auto; // reduces the width from 100%;
+			margin: baseline(0.25) 0.25em;
 		}
 	}
 }
