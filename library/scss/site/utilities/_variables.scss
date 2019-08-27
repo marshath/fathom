@@ -54,11 +54,15 @@ COLORS - utilities/mixins
 $site-colors: (
 	'primary': #15cee4,		// light blue
 	'secondary': #2c89dd,	// blue
-	'accent': #b5ea42,		// green
-	'blue': #2c8,		// blue
+	'accent': #5ab213,		// green b5ea42
+	'blue': #2c8,			// blue
+	'green': #5ab213,		// green
+	'green-light': #a8dd36,	// green light
+	'green-dark': #0e682d,	// green dark
 	'background': #162950,	// tan
 	'foreground': #666,		// gray
 	'text': #222,			// dark-gray
+	'black': #000,			// black
 );
 
 // ALERTS

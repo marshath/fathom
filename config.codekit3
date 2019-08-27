@@ -247,6 +247,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/library/images/login-logo.png": {
+		"ft": 32768,
+		"iS": 9153,
+		"oA": 0,
+		"oAP": "/library/images/login-logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/library/images/logo-FI-blue.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -277,6 +288,28 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/library/images/logo.png": {
+		"ft": 32768,
+		"iS": 6156,
+		"oA": 0,
+		"oAP": "/library/images/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/library/images/logo@2x.png": {
+		"ft": 32768,
+		"iS": 13663,
+		"oA": 0,
+		"oAP": "/library/images/logo@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/library/images/nothing.gif": {
 		"ft": 4194304,
 		"iS": 1140,
@@ -292,6 +325,16 @@
 		"oAP": "/library/images/nothumb.gif",
 		"oF": 0,
 		"opt": 0
+		},
+	"/library/images/swoosh.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/library/images/swoosh.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"/library/images/win8-tile-icon.png": {
 		"ft": 32768,
