@@ -10,12 +10,13 @@ HEADER
 *******************************/
 .header-logo {
 	width:30%;
-	max-width: 160px;
+	max-width: 220px;
 	max-height: 100px;
-	margin: baseline(0.5) 0;
+	padding: baseline(1.25) 0 0 0;
 	text-align: center;
-	@include bp('laptop') {			// ***** laptop ***** //
-		margin-left: 2vw;
+	margin-left: 1em;
+	@include bp('tablet-v') {			// ***** tablet vertical & up ***** //
+		margin-left: 4vw;
 	}
 	@include bp('television') {		// ***** television ***** //
 		margin-left: 5vw;

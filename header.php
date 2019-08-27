@@ -43,10 +43,7 @@
 					<div id="logo" class="header-logo" itemscope itemtype="http://schema.org/Organization">
 						<a href="<?php echo home_url(); ?>" rel="nofollow">
 							<?php // responsive image - logo ?>
-							<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png"
-								srcset="<?php echo get_template_directory_uri(); ?>/library/images/logo.png 1x,
-								<?php echo get_template_directory_uri(); ?>/library/images/logo@2x.png 2x"
-								alt="<?php bloginfo('name'); ?>'s logo">
+							<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-FI-white.svg" alt="<?php bloginfo('name'); ?>'s logo">
 							<span class="site-title"><?php bloginfo('name'); ?></span>
 						</a>
 					</div>

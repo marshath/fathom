@@ -29,6 +29,12 @@ HOME
 		text-align: center;
 		@include font-size(30);
 		text-shadow: 1px 2px 3px black;
+		@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
+			font-size: 5vw;
+		}
+		@include bp('television') {		// ***** Tablet Vertical ***** //
+			@include font-size(60);
+		}
 	}
 	p {
 		@include font-size(18);
