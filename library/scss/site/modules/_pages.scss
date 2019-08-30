@@ -11,10 +11,9 @@ HOME
 .splash-hero {
 	background-size: cover;
 	background-position: center center;
-	padding: 8em 1em 6em 1em;		// spacing for nav on top
-	min-height: 50vh;			// half page height
+	padding: 25vw 1em 20vw 1em;		// spacing for nav on top
 	@include bp('tablet-v') {
-		padding: 12em 1em 10em 1em;		// spacing for nav on top
+		padding: 11em 1em 10em 1em;		// spacing for nav on top
 	}
 }
 .splash-title {
@@ -22,34 +21,87 @@ HOME
 	text-align: center;
 }
 .splash-text {
-	max-width: 800px;
 	margin: auto;
 	color: #f9f9f9;
 	h2 {
 		text-align: center;
 		@include font-size(30);
 		text-shadow: 1px 2px 3px black;
-		@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
-			font-size: 5vw;
-		}
-		@include bp('television') {		// ***** Tablet Vertical ***** //
-			@include font-size(60);
-		}
+	}
+	h3 {
+		text-align: center;
+		text-shadow: 1px 2px 3px black;
+		letter-spacing: 2px;
+		line-height: 1;
+		margin-bottom: baseline(0.75);		// space equal distance from p
 	}
 	p {
+		position: relative;					// set parent positioning for ::before, ::after
+		max-width: 800px;					// set fixed width
+		background: site-color('blue-dark');
+		padding: 1.5em 2em 2.25em 2em;
+		margin: auto;
 		@include font-size(18);
-		background: rgba( 0,0,0,0.5);
-		@include border-radius();
-		padding: 1em 2em 2.5em 2em;
+		line-height: baseline(1);
+		box-shadow: 1px 2px 3px rgba(0,0,0,0.5);
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			left: 2%;
+			width: 96%;
+			height: 2px;
+			background-image: linear-gradient(to left, site-color-alpha('secondary', 'dark') 0%, site-color-alpha('primary', 'light') 50%, site-color-alpha('secondary', 'dark') 100%);
+			// border-top: 2px dotted site-color-alpha('primary', 'dark');
+		}
+		&::before {
+			top: 3%;
+		}
+		&::after {
+			bottom: 3%;
+		}
+	}
+	@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
+		h2 {
+			font-size: 5vw;
+		}
+		h3 {
+			font-size: 3vw;
+		}
+	}
+	@include bp('television') {		// ***** Tablet Vertical ***** //
+		h2 {
+			@include font-size(60);
+		}
+		h3 {
+			@include font-size(36);
+		}
 	}
 }
 
 .cta-block {
 	text-align: center;
-	margin: -4.5em auto 0 auto;
+	margin: -3.25em auto 0 auto;
 	position: relative; 				// set parent positioning for ::after
 	z-index: 2;
 	.btn {
+		background: site-color('accent');
+		background-image: linear-gradient(to bottom, site-color('accent') 10%, site-color('green-dark') 90%);
+		box-shadow: inset 0 -0.15em 0.15em rgba(0,0,0,0.25), inset 0 0.15em 0.15em rgba(255,255,255,0.5);
+		border: 0.35em solid site-color('blue-dark');
+		text-shadow: 0 1px 3px black;
+		font-weight: bold;
+		font-style: italic;
+		@include font-size(18);
+		padding: 1em 1.5em;
+		transition: all 2s ease-in-out;
+		transition-delay: 0.2s;
+		&:hover {
+			background: site-color('green-light');
+			background-image: linear-gradient(to bottom, site-color('green-light') 10%, site-color('accent') 90%);
+			border-color: site-color('green-light');
+		}
+	}
+	/* .btn {
 		background: site-color('accent');
 		background-image: linear-gradient(to bottom, site-color('accent') 10%, site-color('green-dark') 90%);
 		box-shadow: 0 0.25em 1em rgba(0,0,0,1), inset 0 -0.15em 0.15em rgba(0,0,0,0.25), inset 0 0.15em 0.15em rgba(255,255,255,0.5);
@@ -65,7 +117,7 @@ HOME
 			background-image: linear-gradient(to bottom, site-color('green-light') 10%, site-color('accent') 90%);
 			border-color: site-color('green-light');
 		}
-	}
+	} */
 }
 
 /**** Callouts ****/
@@ -94,6 +146,16 @@ HOME
 		
 	}
 }
+
+/*******************************
+CONTACT
+*******************************/
+.project-form {
+	padding: baseline(5) 10% baseline(2);
+}
+
+
+
 
 /*******************************
 BLOG

@@ -9,7 +9,13 @@
 CONTACT FORM 
 *******************************/
 form { 
-	@include column(12);
+	width: 100%;
+	// remove gravity form default list styles
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
 }
 
 input, select, textarea {
@@ -17,16 +23,14 @@ input, select, textarea {
 }
 
 label { 
-	
+	color: site-color-lighten('text', 2);
+	@include font-size(14);
 }
 
 label abbr { // Required Form Fields
 	color: alert-color('error');
 }
 
-/*******************************
-TEXT INPUT
-*******************************/
 textarea, 
 input[type='text'], 
 input[type='password'], 
@@ -41,11 +45,52 @@ input[type='month'],
 input[type='week'], 
 input[type='datetime'], 
 input[type='datetime-local'] {
-	width:100%;
-	padding: baseline(0.25) 0.5em;
-	@include border-radius(2);
+	width: 100%;
+	padding: baseline(0.5) 0.75em;
+	border: none;
+	border-bottom: 2px solid site-color-lighten('foreground', 9);
+	&:focus {
+		border-bottom-color: site-color('primary');
+	}
 }
 
+.field-half {				// half width
+	width: 100%;
+	float: left;
+	margin-right: 0%;
+	@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
+		margin-right: 5%;
+		width: 45%;
+	}
+}
+.field-whole {				// full width
+	width: 100%;
+}
+
+.name_first, .name_last {
+	display: block;
+	label {
+		display: block;
+		width: 100%;
+		display: block;
+		margin: - baseline(1.65) 0 0 1em;
+		color: site-color-lighten('foreground', 8);
+	}
+}
+.name_first label {
+	margin-bottom: baseline(1.65);
+}
+.name_last label {
+	margin-bottom: baseline(0.5);
+}
+
+
+// REQUIRED FIELDS
+.gfield_required {
+	color: alert-color('error');		// red
+	font-weight: bold;
+	margin-left: 0.25em;				// move away from text
+}
 
 // TEXT INPUT ERROR
 .error { // Label
@@ -53,7 +98,7 @@ input[type='datetime-local'] {
 }
 .is-error { // Text field
 	background:  alert-color-lighten('error',6);
-	border: 2px solid  alert-color('error');
+	border-bottom: 2px solid  alert-color('error');
 }
 
 // TEXT INPUT VALID
@@ -61,7 +106,7 @@ input[type='datetime-local'] {
 	color: alert-color('good');
 }
 .is-valid { // Text field
-	border: 2px solid alert-color('good');
+	border-bottom-color: alert-color('good');
 }
 
 // TEXT AREA
@@ -74,7 +119,7 @@ textarea {
 PLACEHOLDER TEXT
 *******************************/
 ::placeholder {
-	color: site-color('foreground');
+	color: site-color-lighten('foreground', 8);
 }
 
 
@@ -189,16 +234,10 @@ input[type='range']::-webkit-slider-thumb {
 SUBMIT BUTTON
 *******************************/
 input[type='submit'] {
-	background-color: site-color-lighten('foreground',2);
-	@include font-size(24);
-	color:black;
-	padding: .25em 1em;
-	border: 3px solid  site-color-lighten('foreground',1);
-	@include border-radius(1);
 	cursor:pointer;
+	
 }
 input[type='submit']:hover {
-	background-color: site-color-lighten('foreground',1);
 }
 
 
@@ -215,4 +254,13 @@ NEWSLETTER
 	position: absolute;
 	right:0;
 	top:-0.5em;
+}
+
+
+
+/*******************************
+GRAVITY FORMS
+*******************************/
+.gform_validation_container {
+	@extend .screen-reader-text
 }

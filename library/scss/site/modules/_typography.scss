@@ -13,6 +13,7 @@ body {
 	@include sans-serif;
 	color: site-color('text');
 	line-height: baseline(1);
+	letter-spacing: 1px;
 }
 
 // HEADINGS

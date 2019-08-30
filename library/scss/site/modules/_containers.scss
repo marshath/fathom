@@ -32,8 +32,8 @@ BACKGROUND WRAPS
 	@include clearfix;
 }
 
-.inner-wrap,
-.sidebar {
+.inner-wrap {
+	padding: baseline(2) 0;			// padding top, bottom of the section, article
 }
 
 
@@ -41,14 +41,18 @@ BACKGROUND WRAPS
 HEADER
 *******************************/
 .header-wrap {
-	//background-color: rgba(0,0,0,0.25);
+	background: site-color-alpha('blue-black', 'light');
 	display: block;
 	position: fixed;
 	top: 0;
 	left: 0;
-		background-image: linear-gradient(to bottom,rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.05) 70%, rgba(0,0,0,0) 90%);
+	//background-image: linear-gradient(to bottom,rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.05) 70%, rgba(0,0,0,0) 90%);
 	@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
 	}
+}
+// homepage header
+.home .header-wrap {
+	background: linear-gradient(to bottom, site-color-alpha('blue-black', 'light') 0%, site-color-alpha('blue-black', 'none') 95%);
 }
 .inner-wrap-header {
 	display: flex;							// set logo and navigation inline

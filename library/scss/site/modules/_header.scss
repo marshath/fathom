@@ -12,7 +12,7 @@ HEADER
 	width:30%;
 	max-width: 220px;
 	max-height: 100px;
-	padding: baseline(1.25) 0 0 0;
+	padding: baseline(0.75) 0 0 0;
 	text-align: center;
 	margin-left: 1em;
 	@include bp('tablet-v') {			// ***** tablet vertical & up ***** //

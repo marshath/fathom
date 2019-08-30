@@ -53,9 +53,11 @@ COLORS - utilities/mixins
 // BRANDING
 $site-colors: (
 	'primary': #15cee4,		// light blue
-	'secondary': #2c89dd,	// blue
+	'secondary': #2c89dd,	// blue dark
 	'accent': #5ab213,		// green b5ea42
-	'blue': #2c8,			// blue
+	'blue': #15cee4,			// blue
+	'blue-dark': #031b47,	// blue dark
+	'blue-black': #02102b,	// blue black
 	'green': #5ab213,		// green
 	'green-light': #a8dd36,	// green light
 	'green-dark': #0e682d,	// green dark
@@ -87,7 +89,9 @@ $social-colors: (
 
 // ALPHA (opacity)
 $color-opacity: (	// set opacity values
+  'bright': 1,		// opacity used with lighter colors
   'light': 0.8,		// opacity used with lighter colors
   'dark': 0.4,		// opacity used with darker colors
+  'none': 0,		// opacity used with darker colors
 );
 
