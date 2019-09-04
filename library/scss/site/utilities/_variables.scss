@@ -52,12 +52,13 @@ COLORS - utilities/mixins
 *******************************/
 // BRANDING
 $site-colors: (
-	'primary': #15cee4,		// light blue
-	'secondary': #2c89dd,	// blue dark
-	'accent': #5ab213,		// green b5ea42
-	'blue': #15cee4,			// blue
+	'primary': #30abde,		// blue
+	'secondary': #041434,	// blue black
+	'accent': #5ab213,		// green
+	'blue': #30abde,		// blue
+	'blue-light': #15cee4,	// blue light
 	'blue-dark': #031b47,	// blue dark
-	'blue-black': #02102b,	// blue black
+	'blue-black': #041434,	// blue black
 	'green': #5ab213,		// green
 	'green-light': #a8dd36,	// green light
 	'green-dark': #0e682d,	// green dark
@@ -65,6 +66,7 @@ $site-colors: (
 	'foreground': #666,		// gray
 	'text': #222,			// dark-gray
 	'black': #000,			// black
+	'white': #fff,			// white
 );
 
 // ALERTS

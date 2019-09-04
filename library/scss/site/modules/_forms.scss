@@ -54,34 +54,19 @@ input[type='datetime-local'] {
 	}
 }
 
-.field-half {				// half width
-	width: 100%;
-	float: left;
-	margin-right: 0%;
-	@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
-		margin-right: 5%;
-		width: 45%;
+#gform_fields_1 {
+	display: flex;
+	flex-flow: column nowrap;
+	@include bp('tablet-v') {	// ***** Tablet Vertical and up ***** //
+		flex-flow: row wrap;
+		li {
+			flex-basis: 45%;
+			margin-right: 5%;
+			&:nth-child(3), &:nth-child(6) {
+				flex-basis: 95%;
+			}
+		}
 	}
-}
-.field-whole {				// full width
-	width: 100%;
-}
-
-.name_first, .name_last {
-	display: block;
-	label {
-		display: block;
-		width: 100%;
-		display: block;
-		margin: - baseline(1.65) 0 0 1em;
-		color: site-color-lighten('foreground', 8);
-	}
-}
-.name_first label {
-	margin-bottom: baseline(1.65);
-}
-.name_last label {
-	margin-bottom: baseline(0.5);
 }
 
 
@@ -235,7 +220,7 @@ SUBMIT BUTTON
 *******************************/
 input[type='submit'] {
 	cursor:pointer;
-	
+	@extend .btn;
 }
 input[type='submit']:hover {
 }
@@ -262,5 +247,7 @@ NEWSLETTER
 GRAVITY FORMS
 *******************************/
 .gform_validation_container {
-	@extend .screen-reader-text
+	display: none !important;
+	position: absolute !important;
+	left: -9999px;
 }

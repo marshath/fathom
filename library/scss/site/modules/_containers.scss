@@ -6,9 +6,9 @@
 
 
 body {
-	width: 100%; // sets width for grid columns
-	background: site-color('foreground');
-	@include clearfix; // fixes height with grid columns
+	width: 100%; 				// sets width for grid columns
+	background: #fafafa;		// very light gray
+	@include clearfix; 			// fixes height with grid columns
 }
 
 
@@ -22,7 +22,6 @@ BACKGROUND WRAPS
 	@include clearfix;
 }
 .page-wrap {
-	background-color: #f6f6f6;
 }
 
 .header-wrap,
@@ -41,7 +40,7 @@ BACKGROUND WRAPS
 HEADER
 *******************************/
 .header-wrap {
-	background: site-color-alpha('blue-black', 'light');
+	background: site-color('blue-black');
 	display: block;
 	position: fixed;
 	top: 0;
@@ -53,7 +52,7 @@ HEADER
 // homepage header
 .home .header-wrap {
 	background: linear-gradient(to bottom, site-color-alpha('blue-black', 'light') 0%, site-color-alpha('blue-black', 'none') 95%);
-}
+} 
 .inner-wrap-header {
 	display: flex;							// set logo and navigation inline
 	flex-flow: row nowrap;					// set logo and navigation inline
@@ -80,7 +79,5 @@ SIDEBAR
 FOOTER 
 *******************************/
 .footer-wrap {
-	background-color: site-color('foreground');
-	background-image: linear-gradient(to bottom, #444 0%, site-color('foreground') 7%);
 }
 

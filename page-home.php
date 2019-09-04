@@ -34,7 +34,7 @@
 										echo '<div class="feature-callouts-item">
 											<div class="cta-icon"><img src="', the_sub_field('cta_icon'), '"></div>
 											<h3 class="cta-title">', the_sub_field('cta_title'), '</h3>
-											<div class="cta-text">', the_sub_field('cta_text'), '</div>
+											<p class="cta-text">', the_sub_field('cta_text'), '</p>
 										</div>';
 								        
 								    endwhile;

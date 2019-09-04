@@ -27,29 +27,6 @@ HEADER & FOOTER NAVIGATION
 	li {
 		width:100%;
 		flex-grow: 1;
-		&:last-child a {
-			color: white;
-			border-color: site-color('primary');
-			background: site-color-alpha('blue-dark','light');
-			&:hover, &:focus {
-				color: rgba(255,255,255,1);
-				background: site-color-alpha('primary', 'dark');
-			}
-		}
-	}
-	a {
-		color: rgba(255,255,255,0.85);
-		text-decoration: none;
-		text-shadow: 0 2px 2px black;
-		padding: baseline(0.6) 0;
-		display:block;
-		border-radius: 0.15em;
-		border: 2px solid rgba(0,0,0,0);
-		//background: site-color-alpha('primary', 'dark');
-		&:hover, &:focus {
-			color: rgba(255,255,255,1);
-			background: site-color-alpha('primary', 'dark');
-		}
 	}
 }
 
@@ -78,8 +55,29 @@ HEADER & FOOTER NAVIGATION
 	}
 	li {
 		background: site-color-alpha('secondary', 'light');
+		&:last-child a {
+			color: white;
+			border-color: site-color('primary');
+			background: site-color-alpha('blue-dark','light');
+			&:hover, &:focus {
+				color: rgba(255,255,255,1);
+				background: site-color-alpha('primary', 'dark');
+			}
+		}
 	}
 	a {
+		color: rgba(255,255,255,0.85);
+		text-decoration: none;
+		text-shadow: 0 2px 2px black;
+		padding: baseline(0.6) 0;
+		display:block;
+		border-radius: 0.15em;
+		border: 2px solid rgba(0,0,0,0);
+		//background: site-color-alpha('primary', 'dark');
+		&:hover, &:focus {
+			color: rgba(255,255,255,1);
+			background: site-color-alpha('primary', 'dark');
+		}
 	}
 	.active ul {
 		display: flex; // shows the navigation, when the 'menu-toggle' is clicked
@@ -103,17 +101,31 @@ HEADER & FOOTER NAVIGATION
 
 .nav-footer {
 	ul {
-	}
-	li {
+		flex-flow: row wrap; // format as a row
+		width: 90%;
+		margin: baseline(1) auto 0 auto;		// push down from body content
 	}
 	a {
+		color: site-color-lighten('text', 2);
+		@include font-size(14);
+		text-decoration: none;
+		display:block;
+		&:hover, &:focus {
+			color: site-color('primary');
+			text-decoration: underline;
+		}
+	}
+	@include bp('phone-v') {	// ***** Phone Vertical ***** //
+		li {
+			flex-basis: 25%;						// set 2-up for mobile
+		}
 	}
 	@include bp('tablet-v') {	// ***** Tablet Vertical ***** //
 		ul {
-			flex-flow: row wrap; // format as a row
+			width: 400px;
 		}
 		li {
-			width: auto; // reduces the width from 100%;
+			flex-basis: 25%;
 		}
 	}
 }

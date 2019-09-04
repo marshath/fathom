@@ -34,4 +34,5 @@ COPYRIGHT
 .copyright {
 	@include font-size(14);
 	text-align: center;
+	color: site-color-lighten('text', 5);
 }

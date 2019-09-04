@@ -11,7 +11,7 @@ HOME
 .splash-hero {
 	background-size: cover;
 	background-position: center center;
-	padding: 25vw 1em 20vw 1em;		// spacing for nav on top
+	padding: 25vw 0.25em 20vw 0.25em;		// spacing for nav on top
 	@include bp('tablet-v') {
 		padding: 11em 1em 10em 1em;		// spacing for nav on top
 	}
@@ -29,19 +29,19 @@ HOME
 		text-shadow: 1px 2px 3px black;
 	}
 	h3 {
+		@include font-size(24);
 		text-align: center;
 		text-shadow: 1px 2px 3px black;
-		letter-spacing: 2px;
-		line-height: 1;
-		margin-bottom: baseline(0.75);		// space equal distance from p
+		line-height: 1.1;
+		font-weight: normal;
+		margin-bottom: baseline(1);		// space equal distance from p
 	}
 	p {
 		position: relative;					// set parent positioning for ::before, ::after
-		max-width: 800px;					// set fixed width
-		background: site-color('blue-dark');
-		padding: 1.5em 2em 2.25em 2em;
+		max-width: 1000px;					// set fixed width
+		padding: 1.25em 0.75em 2.25em 0.75em;
 		margin: auto;
-		@include font-size(18);
+		@include font-size(21);
 		line-height: baseline(1);
 		box-shadow: 1px 2px 3px rgba(0,0,0,0.5);
 		&::before, &::after {
@@ -50,22 +50,28 @@ HOME
 			left: 2%;
 			width: 96%;
 			height: 2px;
-			background-image: linear-gradient(to left, site-color-alpha('secondary', 'dark') 0%, site-color-alpha('primary', 'light') 50%, site-color-alpha('secondary', 'dark') 100%);
+			background-image: linear-gradient(to left, site-color-alpha('white', 'none') 0%, site-color-alpha('white', 'light') 50%, site-color-alpha('white', 'none') 100%);
 			// border-top: 2px dotted site-color-alpha('primary', 'dark');
 		}
 		&::before {
-			top: 3%;
+			top: 0%;
 		}
 		&::after {
-			bottom: 3%;
+			bottom: 0%;
 		}
 	}
 	@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
 		h2 {
 			font-size: 5vw;
+			letter-spacing: 2px;
 		}
 		h3 {
 			font-size: 3vw;
+			letter-spacing: 3px;
+			line-height: 1;
+		}
+		p {
+			padding: 1.25em 2em 2.25em 2em;
 		}
 	}
 	@include bp('television') {		// ***** Tablet Vertical ***** //
@@ -84,66 +90,39 @@ HOME
 	position: relative; 				// set parent positioning for ::after
 	z-index: 2;
 	.btn {
-		background: site-color('accent');
-		background-image: linear-gradient(to bottom, site-color('accent') 10%, site-color('green-dark') 90%);
-		box-shadow: inset 0 -0.15em 0.15em rgba(0,0,0,0.25), inset 0 0.15em 0.15em rgba(255,255,255,0.5);
-		border: 0.35em solid site-color('blue-dark');
-		text-shadow: 0 1px 3px black;
-		font-weight: bold;
-		font-style: italic;
-		@include font-size(18);
-		padding: 1em 1.5em;
-		transition: all 2s ease-in-out;
-		transition-delay: 0.2s;
-		&:hover {
-			background: site-color('green-light');
-			background-image: linear-gradient(to bottom, site-color('green-light') 10%, site-color('accent') 90%);
-			border-color: site-color('green-light');
-		}
+		border: 0.2em solid site-color('black');		// add a black border
 	}
-	/* .btn {
-		background: site-color('accent');
-		background-image: linear-gradient(to bottom, site-color('accent') 10%, site-color('green-dark') 90%);
-		box-shadow: 0 0.25em 1em rgba(0,0,0,1), inset 0 -0.15em 0.15em rgba(0,0,0,0.25), inset 0 0.15em 0.15em rgba(255,255,255,0.5);
-		border: 2px solid site-color('accent');
-		text-shadow: 0 1px 3px black;
-		font-weight: bold;
-		font-style: italic;
-		@include font-size(18);
-		padding: 1em 1.5em;
-		transition: all 0.2s ease-in-out;
-		&:hover {
-			background: site-color('green-light');
-			background-image: linear-gradient(to bottom, site-color('green-light') 10%, site-color('accent') 90%);
-			border-color: site-color('green-light');
-		}
-	} */
 }
 
 /**** Callouts ****/
 .feature-callouts {
 	display: flex;
 	flex-flow: column nowrap;			// vertical orientation
-	border-top: 6px solid site-color('primary');		// blue line above
-	border-bottom: 7px solid site-color('primary');		// blue line below
+	color: site-color('secondary');		// blue dark
 	&-item {
 		background: linear-gradient(45deg, #fff 0%, #eee 100%);
-		padding: 1em 1.5em;
+		padding: baseline(1) 5% baseline(2) 5%;
 	}
 	@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
 		flex-flow: row nowrap;			// horizontal orientation
+		&-item {
+			padding: baseline(1) 3% baseline(2) 3%;
+		}
 	}
 }
 .cta {
 	&-icon {
-		max-width: 50px;
+		width: 25%;
+		max-width: 6em;
 		margin: auto;
 	}
 	&-title {
+		@include font-size(24);
 		text-align: center;
+		margin-top: 0;
 	}
-	&-text {
-		
+	p {
+		line-height: baseline(1);
 	}
 }
 
@@ -153,7 +132,17 @@ CONTACT
 .project-form {
 	padding: baseline(5) 10% baseline(2);
 }
-
+.name_first, .name_last {
+	position: relative;
+	label {
+		text-transform: uppercase;
+		color: site-color-lighten('text', 5);
+		font-size: 0.7em;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
 
 
 
