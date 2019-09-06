@@ -54,7 +54,7 @@
 					<nav class="nav-header" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						
 						<?php // mobile menu toggle ?>
-						<h3 id="menu-toggle"><a href="#"><span class="menu-icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="menu-text">Menu</span></a></h3>
+						<h3 id="menu-toggle" class=""><a href="#"><span class="menu-text">Menu</span></a></h3>
 						
 						<?php // menu items ?>
 						<div id="nav-menu">

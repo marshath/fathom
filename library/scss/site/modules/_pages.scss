@@ -34,23 +34,23 @@ HOME
 		text-shadow: 1px 2px 3px black;
 		line-height: 1.1;
 		font-weight: normal;
-		margin-bottom: baseline(1);		// space equal distance from p
+		margin-bottom: baseline(0.5);		// space equal distance from p
 	}
 	p {
 		position: relative;					// set parent positioning for ::before, ::after
 		max-width: 1000px;					// set fixed width
-		padding: 1.25em 0.75em 2.25em 0.75em;
+		padding: 1.25em 1.5em 2.25em 1.5em;
 		margin: auto;
 		@include font-size(21);
 		line-height: baseline(1);
-		box-shadow: 1px 2px 3px rgba(0,0,0,0.5);
+		background-image: linear-gradient(to right, site-color-alpha('black','none') 0%, site-color-alpha('black','dark') 15%, site-color-alpha('black','dark') 85%, site-color-alpha('black','none') 100%);
 		&::before, &::after {
 			content: '';
 			position: absolute;
 			left: 2%;
 			width: 96%;
 			height: 2px;
-			background-image: linear-gradient(to left, site-color-alpha('white', 'none') 0%, site-color-alpha('white', 'light') 50%, site-color-alpha('white', 'none') 100%);
+			background-image: linear-gradient(to left, site-color-alpha('white', 'none') 0%, site-color-alpha('white', 'dark') 50%, site-color-alpha('white', 'none') 100%);
 			// border-top: 2px dotted site-color-alpha('primary', 'dark');
 		}
 		&::before {

@@ -9,13 +9,17 @@
 HEADER
 *******************************/
 .header-logo {
-	width:30%;
-	max-width: 220px;
-	max-height: 100px;
-	padding: baseline(0.75) 0 0 0;
+	width: 230px;
+	max-width: 250px;
+	padding: baseline(1) 0 0 0;
 	text-align: center;
 	margin-left: 1em;
+	@include bp('phone-h') {			// ***** tablet vertical & up ***** //
+		padding-top: baseline(0.8);
+
+	}
 	@include bp('tablet-v') {			// ***** tablet vertical & up ***** //
+		max-width: 250px;
 		margin-left: 4vw;
 	}
 	@include bp('television') {		// ***** television ***** //
@@ -25,10 +29,9 @@ HEADER
 .site-title {
 	display: none;
 }
-
 #menu-toggle { // toggles the menu visibity for mobile
 	display: block;
-	@include bp('tablet-v') {
+	@include bp('tablet-h') {
 		display: none;
 	}
 }

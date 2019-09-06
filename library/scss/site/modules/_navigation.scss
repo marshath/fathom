@@ -30,32 +30,75 @@ HEADER & FOOTER NAVIGATION
 	}
 }
 
-.nav-header {
-	width: 80%;						// reduce menu mobile
+.nav-header {						// mobile navigation positioning
+	width: 16em;						// reduce menu mobile
 	max-width: 30em;
+	position: absolute;
+	top: baseline(4.5);
+	right: 0;
+
 	h3 { // is the 'menu-toggle'
-		text-align: center;
-		position: relative;			// parent positioning for hamberger menu
-		&::before {
-			content: 'E';
-			float: left;
-			color: white;
-			font-family: arial, sans-serif;
+		position: absolute;			// parent positioning for hamberger menu
+		width: 100px;
+		top: - baseline(4);
+		right: 0.5em;
+		a {
+			text-align: right;
+			padding-right: 0.5em;			// menu text right side spacing
+			background: site-color-lighten('blue-dark', 1);
+		}
+		&::before, &::after {
+			content: '';
 			position: absolute;
-			top: baseline(1);
-			left: 35%;
+			left: 0.5em;
+			width: 16px;
+			height: 2px;
+			background: site-color('white');
+			display: block;
+			color: site-color('white');
+			transition: all 0.2s ease;
+		}
+		&::before {
+			top: 50%;
+			margin-top: -4px;
+		}
+		&::after {
+			bottom: 50%;
+			margin-bottom: -4px;
+		}
+		&.active {
+			&::before, &::after {
+				margin-top: -1px;
+				margin-bottom: -1px;
+			}
+			&::before {
+				transform: rotateZ(45deg);
+			}
+			&::after {
+				transform: rotateZ(-45deg);
+			}
 		}
 	}
 	ul {
-		display: none; // hides the navigation, until the 'menu-toggle' is clicked
-		border-radius: 0.25em;
+		width: 100%;
+		border-top-left-radius: 0.25em;
+		border-bottom-left-radius: 0.25em;
 		overflow: hidden;
-		border: 2px solid site-color('secondary');
-		box-shadow: 0 0.25em 1em rgba(0,0,0,0.7);
+		border: 2px solid site-color('secondary');	
+		display: block;
+		padding: 2px;
+		background: site-color('secondary');
+		position: absolute;
+		top: - baseline(1);
+		right: -100%;			// slide menu off screen
+		transition: all 0.5s ease;
+		&.active {
+			right: 0;			// slide menu on screen
+		}
 	}
 	li {
-		background: site-color-alpha('secondary', 'light');
-		&:last-child a {
+		background: site-color('secondary');
+		&:last-child a {			// Get in Touch callout
 			color: white;
 			border-color: site-color('primary');
 			background: site-color-alpha('blue-dark','light');
@@ -73,23 +116,22 @@ HEADER & FOOTER NAVIGATION
 		display:block;
 		border-radius: 0.15em;
 		border: 2px solid rgba(0,0,0,0);
-		//background: site-color-alpha('primary', 'dark');
 		&:hover, &:focus {
 			color: rgba(255,255,255,1);
 			background: site-color-alpha('primary', 'dark');
 		}
 	}
-	.active ul {
-		display: flex; // shows the navigation, when the 'menu-toggle' is clicked
-	}
-	@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
+	@include bp('tablet-h') {		// ***** Tablet Vertical ***** //
 		width: 80%;				// collapse menu width
+		top: baseline(1.125);
 		ul {
 			display: flex; // shows the navigation
-			flex-flow: row wrap; // format as a row
+			flex-flow: row nowrap; // format as a row
 			margin-right: 2em;
 			border: none;
+			background: none;
 			box-shadow: none;
+			right: 0;			// return menu on screen
 		}
 		li {
 			background: none;
@@ -98,6 +140,7 @@ HEADER & FOOTER NAVIGATION
 		}
 	}
 }
+
 
 .nav-footer {
 	ul {

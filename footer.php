@@ -23,6 +23,8 @@
 			</footer> <?php // end .footer-wrap ?>
 
 		</div> <?php // end #container .wrap ?>
+		
+		<?php get_template_part('footer-plugins'); ?>
 
 		<?php // Default locations for footer loading plugins is library/js/scripts
 			// all js scripts are loaded in library/bones.php ?>

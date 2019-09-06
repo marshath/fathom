@@ -89,6 +89,14 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
+	"/inc/footer-plugins.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/inc/footer-plugins.php",
+		"oF": 0
+		},
 	"/inc/header-icons.php": {
 		"cB": 0,
 		"ft": 8192,

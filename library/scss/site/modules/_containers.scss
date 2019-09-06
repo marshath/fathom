@@ -45,6 +45,8 @@ HEADER
 	position: fixed;
 	top: 0;
 	left: 0;
+	height: baseline(3.25);
+	z-index: 50;			// put above other content
 	//background-image: linear-gradient(to bottom,rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.05) 70%, rgba(0,0,0,0) 90%);
 	@include bp('tablet-v') {		// ***** Tablet Vertical ***** //
 	}
