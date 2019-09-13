@@ -1,7 +1,7 @@
 <?php 
-/*
-/* HEADER ICONS AND FAVICONS
-/*
+//
+// HEADER ICONS AND FAVICONS
+//
 ?>
 		
 		<?php // Favicon ?>

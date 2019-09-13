@@ -17,12 +17,60 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
+	"/_notes/apple-touch-icon.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/_notes/apple-touch-icon.psd",
+		"oF": 0
+		},
+	"/_notes/favicon.iconsproj": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/_notes/favicon.iconsproj",
+		"oF": 0
+		},
+	"/_notes/favicon_16.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/_notes/favicon_16.psd",
+		"oF": 0
+		},
+	"/_notes/favicon_32.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/_notes/favicon_32.psd",
+		"oF": 0
+		},
+	"/_notes/home spalsh.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/_notes/home spalsh.psd",
+		"oF": 0
+		},
 	"/_notes/icons.psd": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/_notes/icons.psd",
+		"oF": 0
+		},
+	"/_notes/icons_72.ai": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/_notes/icons_72.ai",
 		"oF": 0
 		},
 	"/_notes/screenshot.psd": {
@@ -262,6 +310,36 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/library/images/icon_analytics.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/library/images/icon_analytics.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/library/images/icon_insight.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/library/images/icon_insight.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/library/images/icon_results.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/library/images/icon_results.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"/library/images/login-logo.png": {
 		"ft": 32768,
