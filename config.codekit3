@@ -73,14 +73,6 @@
 		"oAP": "/_notes/icons_72.ai",
 		"oF": 0
 		},
-	"/_notes/screenshot.psd": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/_notes/screenshot.psd",
-		"oF": 0
-		},
 	"/archive-custom_type.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2003,12 +1995,28 @@
 		"oAP": "/library/translation/zh_CN.po",
 		"oF": 0
 		},
+	"/page-contact.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/page-contact.php",
+		"oF": 0
+		},
 	"/page-home.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/page-home.php",
+		"oF": 0
+		},
+	"/page-services.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/page-services.php",
 		"oF": 0
 		},
 	"/page.php": {

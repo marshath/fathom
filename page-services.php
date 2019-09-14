@@ -7,7 +7,7 @@
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-						<section id="post-<?php the_ID(); ?>" class="inner-wrap text-wrap" role="article">
+						<section id="post-<?php the_ID(); ?>" class="inner-wrap text-wrap services-wrap" role="article">
 
 							<header class="article-header">
 								<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
@@ -21,7 +21,19 @@
 							</footer> <?php // end .article-footer ?>
 
 						</section> <?php // end #post-<id> .inner-wrap ?>
+						
+						<section class="inner-wrap text-wrap portfolio-wrap">
 
+							<header class="article-header">
+								<h2 class="section-title">Case Studies</h2>
+							</header> <?php // end .article header ?>
+
+							<section class="entry-content" itemprop="articleBody">
+								<p>Portfolio links coming soon.</p>
+							</section> <?php // end .content-entry ?>
+							
+						</section> <?php // end #post-<id> .inner-wrap ?>
+						
 						<?php endwhile; else : ?>
 
 							<article id="post-not-found" class="article-wrap">

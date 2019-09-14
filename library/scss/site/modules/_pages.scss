@@ -126,20 +126,78 @@ HOME
 	}
 }
 
+
+/*******************************
+SERVICES
+*******************************/
+.page-id-19 .entry-content {
+	@include clearfix;			// force .portfolio-wrap below .wp-block-image
+	.wp-block-image {
+		width: 100%;
+		max-width: 600px;
+		margin: auto;
+	}
+	h2 {	// :nth-child of .page-id-19
+		&:nth-child(3) {		// Explore
+			color: site-color('yellow');
+			border-bottom: 1px dotted site-color('yellow');
+		}
+		&:nth-child(5) {		// Ideate
+			color: site-color('red');
+			border-bottom: 1px dotted site-color('red');
+		}
+		&:nth-child(7) {		// Test
+			color: site-color('blue');
+			border-bottom: 1px dotted site-color('blue');
+		}
+		&:nth-child(9) {		// Listen
+			color: site-color('green');
+			border-bottom: 1px dotted site-color('green');
+		}
+	}
+	ul {
+		columns: 1;
+	}
+	li {
+		margin: 0;
+	}
+	@include bp('laptop') {		// ***** Laptop & up ***** //
+		.wp-block-image {
+			width: 50%;
+			float: right;
+			margin-top: - baseline(1);
+			background: #fafafa;
+		}
+	}
+	@include bp('television') {		// ***** Television & up ***** //
+		.wp-block-image {
+			width: 40%;
+		}
+		ul {
+			columns: 2;
+		}
+	}
+}
+
+.portfolio-wrap {
+	background: white;
+}
+
+
 /*******************************
 CONTACT
 *******************************/
-.project-form {
-	padding: baseline(5) 10% baseline(2);
+li {								// push down next field for name labels
+	margin-bottom: baseline(0.75);
 }
-.name_first, .name_last {
+.name_first, .name_last {			// name labels
 	position: relative;
 	label {
 		text-transform: uppercase;
-		color: site-color-lighten('text', 5);
+		color: site-color-lighten('text', 7);
 		font-size: 0.7em;
 		position: absolute;
-		top: 0;
+		bottom: -40%;
 		left: 0;
 	}
 }

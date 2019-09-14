@@ -33,6 +33,13 @@ BACKGROUND WRAPS
 
 .inner-wrap {
 	padding: baseline(2) 0;			// padding top, bottom of the section, article
+	&:first-child {
+		padding-top: baseline(4);
+	}
+}
+.text-wrap {
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 

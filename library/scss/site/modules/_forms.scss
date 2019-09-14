@@ -49,49 +49,12 @@ input[type='datetime-local'] {
 	padding: baseline(0.5) 0.75em;
 	border: none;
 	border-bottom: 2px solid site-color-lighten('foreground', 9);
+	box-shadow: 0 0 0.25em rgba(130,130,130,0.1);
+	@include border-radius(0.25);
+	color: site-color('blue-dark');
 	&:focus {
 		border-bottom-color: site-color('primary');
 	}
-}
-
-#gform_fields_1 {
-	display: flex;
-	flex-flow: column nowrap;
-	@include bp('tablet-v') {	// ***** Tablet Vertical and up ***** //
-		flex-flow: row wrap;
-		li {
-			flex-basis: 45%;
-			margin-right: 5%;
-			&:nth-child(3), &:nth-child(6) {
-				flex-basis: 95%;
-			}
-		}
-	}
-}
-
-
-// REQUIRED FIELDS
-.gfield_required {
-	color: alert-color('error');		// red
-	font-weight: bold;
-	margin-left: 0.25em;				// move away from text
-}
-
-// TEXT INPUT ERROR
-.error { // Label
-	color: alert-color('error');
-}
-.is-error { // Text field
-	background:  alert-color-lighten('error',6);
-	border-bottom: 2px solid  alert-color('error');
-}
-
-// TEXT INPUT VALID
-.valid { // Label
-	color: alert-color('good');
-}
-.is-valid { // Text field
-	border-bottom-color: alert-color('good');
 }
 
 // TEXT AREA
@@ -242,7 +205,6 @@ NEWSLETTER
 }
 
 
-
 /*******************************
 GRAVITY FORMS
 *******************************/
@@ -250,4 +212,63 @@ GRAVITY FORMS
 	display: none !important;
 	position: absolute !important;
 	left: -9999px;
+}
+
+// REQUIRED FIELDS
+.gfield_required {
+	color: alert-color('error');		// red
+	font-weight: bold;
+	margin-left: 0.25em;				// move away from text
+}
+
+// TEXT INPUT ERROR
+.error { // Label
+	color: alert-color('error');
+}
+.is-error { // Text field
+	background:  alert-color-lighten('error',6);
+	border-bottom: 2px solid  alert-color('error');
+}
+
+// TEXT INPUT VALID
+.valid { // Label
+	color: alert-color('good');
+}
+.is-valid { // Text field
+	border-bottom-color: alert-color('good');
+}
+
+
+/*******************************
+CONTACT FORM
+*******************************/
+#gform_fields_1 {
+	display: flex;
+	flex-flow: column nowrap;
+	li {
+		.has_first_name span {										// fix for name, first last, fields
+			margin: 0;
+			display: inline-block;
+			width: 100%;
+		}
+		.has_first_name span:nth-child(1) {							// fix for name, push last name field down
+			margin-bottom: baseline(0.5);
+		}
+	}
+	@include bp('tablet-v') {	// ***** Tablet Vertical and up ***** //
+		flex-flow: row wrap;
+		li {
+			flex-basis: 45%;
+			margin-right: 5%;
+			&:nth-child(1), &:nth-child(6) {						// fix for name, first last, fields
+				flex-basis: 95%;
+			}
+			.has_first_name > span {								// fix for name, first last, fields
+				width: 47%;
+			}
+			.has_first_name > span:first-child {
+				margin-right: 4.5%;
+			}
+		}
+	}
 }
