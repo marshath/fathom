@@ -9,21 +9,22 @@
 HEADER
 *******************************/
 .header-logo {
-	width: 230px;
-	max-width: 250px;
+	width: 200px;
+	max-width: 240px;
 	padding: baseline(1) 0 0 0;
 	text-align: center;
 	margin-left: 1em;
 	@include bp('phone-h') {			// ***** tablet vertical & up ***** //
-		padding-top: baseline(0.8);
-
+		padding-top: baseline(0.9);
 	}
 	@include bp('tablet-v') {			// ***** tablet vertical & up ***** //
+		width: 220px;
 		max-width: 250px;
 		margin-left: 4vw;
 	}
 	@include bp('television') {		// ***** television ***** //
 		margin-left: 5vw;
+		width: 240px;
 	}
 }
 .site-title {

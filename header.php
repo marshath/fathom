@@ -6,6 +6,16 @@
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150357667-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-150357667-1');
+		</script>
+
 		<meta charset="utf-8">
 
 		<?php // force Internet Explorer to use the latest rendering engine available ?>
@@ -32,15 +42,15 @@
 
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<body <?php body_class(); ?> itemscope itemtype="https://schema.org/WebPage">
 
 		<div id="container" class="page-wrap">
 
-			<header class="header-wrap" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<header class="header-wrap" role="banner" itemscope itemtype="https://schema.org/WPHeader">
 				<div id="inner-header" class="inner-wrap-header">
 
 					<?php // Compnay logo or text ?>
-					<div id="logo" class="header-logo" itemscope itemtype="http://schema.org/Organization">
+					<div id="logo" class="header-logo" itemscope itemtype="https://schema.org/Organization">
 						<a href="<?php echo home_url(); ?>" rel="nofollow">
 							<?php // responsive image - logo ?>
 							<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-FI-white.svg" alt="<?php bloginfo('name'); ?>'s logo">
@@ -51,10 +61,10 @@
 					<?php // if you'd like to use the site description you can un-comment it below
 						// bloginfo('description'); ?>
 
-					<nav class="nav-header" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="nav-header" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 						
 						<?php // mobile menu toggle ?>
-						<h3 id="menu-toggle" class=""><a href="#"><span class="menu-text">Menu</span></a></h3>
+						<?php // <h3 id="menu-toggle" class=""><a href="#"><span class="menu-text">Menu</span></a></h3> ?>
 						
 						<?php // menu items ?>
 						<div id="nav-menu">

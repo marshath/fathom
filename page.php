@@ -7,7 +7,7 @@
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-						<section id="post-<?php the_ID(); ?>" class="inner-wrap text-wrap" role="article">
+						<section id="post-<?php the_ID(); ?>" class="inner-wrap text-wrap general-header" style="background-image: url('https://fathom-insight.com/anacortes2/wp-content/uploads/2019/10/bg-header.jpg')" role="article">
 
 							<header class="article-header">
 								<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>

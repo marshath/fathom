@@ -17,60 +17,12 @@
 		"oAP": "/404.php",
 		"oF": 0
 		},
-	"/_notes/apple-touch-icon.psd": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/_notes/apple-touch-icon.psd",
-		"oF": 0
-		},
-	"/_notes/favicon.iconsproj": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/_notes/favicon.iconsproj",
-		"oF": 0
-		},
-	"/_notes/favicon_16.psd": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/_notes/favicon_16.psd",
-		"oF": 0
-		},
-	"/_notes/favicon_32.psd": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/_notes/favicon_32.psd",
-		"oF": 0
-		},
-	"/_notes/home spalsh.psd": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/_notes/home spalsh.psd",
-		"oF": 0
-		},
 	"/_notes/icons.psd": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/_notes/icons.psd",
-		"oF": 0
-		},
-	"/_notes/icons_72.ai": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/_notes/icons_72.ai",
 		"oF": 0
 		},
 	"/archive-custom_type.php": {
@@ -105,12 +57,12 @@
 		"oAP": "/footer.php",
 		"oF": 0
 		},
-	"/frontpage.php": {
+	"/front-page.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/frontpage.php",
+		"oAP": "/front-page.php",
 		"oF": 0
 		},
 	"/functions.php": {
@@ -303,31 +255,51 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/library/images/icon_analytics.svg": {
+	"/library/images/icon_bulb.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/library/images/icon_analytics.svg",
+		"oAP": "/library/images/icon_bulb.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/library/images/icon_insight.svg": {
+	"/library/images/icon_clipboard.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/library/images/icon_insight.svg",
+		"oAP": "/library/images/icon_clipboard.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/library/images/icon_results.svg": {
+	"/library/images/icon_eye.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/library/images/icon_results.svg",
+		"oAP": "/library/images/icon_eye.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/library/images/icon_splash-arrow.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/library/images/icon_splash-arrow.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/library/images/icon_write.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/library/images/icon_write.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -1993,30 +1965,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/library/translation/zh_CN.po",
-		"oF": 0
-		},
-	"/page-contact.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/page-contact.php",
-		"oF": 0
-		},
-	"/page-home.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/page-home.php",
-		"oF": 0
-		},
-	"/page-services.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/page-services.php",
 		"oF": 0
 		},
 	"/page.php": {

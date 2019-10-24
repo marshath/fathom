@@ -10,11 +10,17 @@ CONTACT FORM
 *******************************/
 form { 
 	width: 100%;
+	background: #fafafa;
+	padding: 1em;
+	@include border-radius(0.75);
 	// remove gravity form default list styles
 	ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
+	}
+	@include bp('tablet-v') {
+		padding: 2em;
 	}
 }
 
@@ -23,7 +29,7 @@ input, select, textarea {
 }
 
 label { 
-	color: site-color-lighten('text', 2);
+	color: site-color('text');
 	@include font-size(14);
 }
 
@@ -48,7 +54,7 @@ input[type='datetime-local'] {
 	width: 100%;
 	padding: baseline(0.5) 0.75em;
 	border: none;
-	border-bottom: 2px solid site-color-lighten('foreground', 9);
+	border-bottom: 2px solid site-color-lighten('foreground', 7);
 	box-shadow: 0 0 0.25em rgba(130,130,130,0.1);
 	@include border-radius(0.25);
 	color: site-color('blue-dark');
@@ -185,8 +191,6 @@ input[type='submit'] {
 	cursor:pointer;
 	@extend .btn;
 }
-input[type='submit']:hover {
-}
 
 
 /*******************************
@@ -229,6 +233,19 @@ GRAVITY FORMS
 	background:  alert-color-lighten('error',6);
 	border-bottom: 2px solid  alert-color('error');
 }
+.validation_error, .validation_message {
+	color: alert-color('error');
+	padding: baseline(0.25) 1em;
+}
+.validation_error {
+	background-color: site-color('white');
+	border: 1px solid alert-color('error');
+	margin-bottom: baseline(1);
+}
+.validation_message {
+	background: site-color-lighten('red', 9);
+	border-top: 2px solid alert-color('error');
+}
 
 // TEXT INPUT VALID
 .valid { // Label
@@ -236,6 +253,14 @@ GRAVITY FORMS
 }
 .is-valid { // Text field
 	border-bottom-color: alert-color('good');
+}
+.gform_confirmation_message {
+	color: alert-color('good');
+	padding: baseline(0.25) 1em;
+	background-color: site-color-lighten('green', 9);
+	//border: 1px solid alert-color('good');
+	margin-bottom: baseline(1);
+	font-weight: bold;
 }
 
 

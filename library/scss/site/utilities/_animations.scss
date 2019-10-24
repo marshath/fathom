@@ -28,8 +28,11 @@ MOVEMENT
 	}
 }
 
-@keyframes scrollBanner {
-	from { transform : translateX(0) }
-	97%  { transform : translateX(80%) }
-	to   { transform : translateX(0%) }
+@keyframes bounce {
+	from { height: 40px; }
+	60%  { height: 40px; }
+	70%  { height: 34px; }
+	80%  { height: 40px; }
+	90%  { height: 34px; }
+	to   { height: 40px; }
 }

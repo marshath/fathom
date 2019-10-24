@@ -8,43 +8,36 @@
 /*******************************
 GLOBAL BUTTONS 
 *******************************/
-.btn, .btn-alt, .btn-disabled {
+.btn {
 	color: white;
 	text-decoration: none;
 	margin: baseline(0.5) 0;
-	padding: baseline(0.5) 1em;
+	padding: baseline(0.5) 1em baseline(0.25);
 	display: inline-block;
-	@include border-radius(1);
-	&:hover {
-		color:white;
-	}
-}
-
-// STANDARD BUTTON
-.btn { 
+	@include border-radius(0.75);
 	background: site-color('primary');
-	text-shadow: 0 2px 2px black;
-	font-weight: bold;
-	font-style: italic;
+	// font-weight: bold;
 	@include font-size(20);
-	padding: 1em 1.5em;
+	padding: baseline(0.5) 1.5em;
 	transition: all 0.2s ease-in-out;
-	bordeR: none;
+	border: none;
+	text-align: center;
 	&:hover, &:active, &:focus {
-		background: site-color('blue-light');
+		background: site-color-lighten('blue', 2);
+		color: white;
 	}
 }
 
-// ALTERNATE BUTTON
-.btn-alt { 
-	background: site-color('primary');
+// ALTERNATE BUTTONS
+.btn--orange { 
+	background: site-color('orange');
 	&:hover {
-		background-color: site-color-lighten('primary',2);
+		background: site-color-lighten('orange', 2);
 	}
 }
 
 // DISABLED BUTTON
-.btn-disabled {
+.btn--disabled {
 	background: site-color('foreground');
 	&:hover {
 		background-color: site-color-lighten('foreground',1);

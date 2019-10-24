@@ -9,7 +9,8 @@
 CONTACT INFORMATION 
 *******************************/
 .footer-wrap {
-	padding-top: baseline(0.5);
+	background: site-color-lighten('black', 1.25);
+	padding-top: baseline(0.25);
 	h4 {
 		margin-bottom: 0;
 	}
@@ -20,19 +21,11 @@ CONTACT INFORMATION
 	}
 }
 
-
-/*******************************
-SOCIAL LINKS 
-*******************************/
-
-
-
-
 /*******************************
 COPYRIGHT
 *******************************/
 .copyright {
-	@include font-size(14);
+	@include font-size(12);
 	text-align: center;
-	color: site-color-lighten('text', 5);
+	color: site-color-lighten('text', 6);
 }
